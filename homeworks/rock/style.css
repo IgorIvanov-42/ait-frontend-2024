@@ -1,24 +1,36 @@
 h1 {
-    font-size: 25px;
+    margin: 10px 0;
+    font-size: 4rem;
     text-align: center;
-    background-color: rgb(207, 54, 85);
+    background-color: rgb(40, 162, 192);
 }
+
 .container {
-    grid-template-rows:repeat(auto-fit, minmax(300px, 1fr));
-    grid-auto-rows: 100px;
-    display: block;
-    gap: 16px;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    align-self: start;
-    justify-items: center;
+    background-color: bisque;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 5px;
+    grid-auto-rows: 650px;
 }
 .grid-item-adaptive {
-    grid-template-rows:repeat(auto-fit, minmax(300px, 1fr));
-    flex-direction: column;
-    background-color:  bisque;
     display: flex;
-    width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 30px;
+  gap: 10px;
    
 }
+.grid-item-adaptive img {
+    max-width: 100%; /* изображение не будет вываливаться за контейнер по ширине */
+    max-height: 100%; /* изображение не будет вываливаться за контейнер по высоте */
+    object-fit: cover; /* масштабируем изображения с сохранением пропорций*/
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* небольшая тень*/
+  }
+  p {
+    font-size: larger;
+    font-weight: 600;
+  }
