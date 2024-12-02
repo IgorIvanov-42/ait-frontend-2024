@@ -14,6 +14,7 @@ h1 {
     justify-items: center;
 }
 .grid-item-adaptive {
+    grid-template-rows:repeat(auto-fit, minmax(300px, 1fr));
     flex-direction: column;
     background-color:  bisque;
     display: flex;
